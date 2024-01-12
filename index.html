@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Live Your Own</title>
+</head>
+<body>
+    <main class="main">
+
+        <div class="FirstBlock">
+            <img class="helloImg" src="img/mainBG.png"  alt="">
+            <nav class="MainPageButtons">
+                <p id="Merch" class="NavText activeBTN">Мерч</p>
+                <p id="Cart"   class="NavText deactiveBTN">Корзина</p>
+            
+            </nav>
+        </div>
+
+        <div class="itemsPage">
+
+            <div class="filterBlock">
+                <p class="filterBTN">Фильтр:</p>
+                <div class="filterBTN Tag">
+                    <p class="filterName">Город</p>
+                    <img src="img/smalX.png" alt="" class="filterClose">
+                </div>
+                
+            </div>
+
+            <div class="itemsBlock">
+
+                
+
+                <div class="item" >
+                    <img class="itemImg " data-type="itemPage1" src="img/HoodieBlack.png" alt="">
+                    <p class="itemTitle">Кусок неба</p>
+                    <p class="itemPrice">1 800 </p>
+                    <p class="buyButton" onclick="addToCard(0)">В корзину</p>
+                        <div class="itemCounter hidden">
+                            <p class="itemMinus">-</p>
+                            <p class="itemQuantity">1</p>
+                            <p class="itemPlus">+</p>
+                        </div>
+                </div>
+
+                <div class="item" >
+                    <img class="itemImg " data-type="itemPage2" src="img/HoodieYellow.png" alt="">
+                    <p class="itemTitle">Труба. Толстовка</p>
+                    <p class="itemPrice">3 200 </p>
+                    <p class="buyButton" onclick="addToCard(1)">В корзину</p>
+                        <div class="itemCounter hidden">
+                            <p class="itemMinus">-</p>
+                            <p class="itemQuantity">1</p>
+                            <p class="itemPlus">+</p>
+                        </div>
+                </div>
+
+                <div class="item" >
+                    <img class="itemImg " data-type="itemPage3" src="img/CardOtherSide.png" alt="">
+                    <p class="itemTitle">Другая сторона</p>
+                    <p class="itemPrice">500 </p>
+                    <p class="buyButton" onclick="addToCard(2)">В корзину</p>
+                        <div class="itemCounter hidden">
+                            <p class="itemMinus">-</p>
+                            <p class="itemQuantity">1</p>
+                            <p class="itemPlus">+</p>
+                        </div>
+                </div>
+
+                <div class="item" >
+                    <img class="itemImg" data-type="itemPage4" src="img/CardHighCulture.png" alt="">
+                    <p class="itemTitle">Высокое искусство</p>
+                    <p class="itemPrice">300 </p>
+                    <p class="buyButton" onclick="addToCard(3)">В корзину</p>
+                        <div class="itemCounter hidden">
+                            <p class="itemMinus">-</p>
+                            <p class="itemQuantity">1</p>
+                            <p class="itemPlus">+</p>
+                        </div>
+                </div>
+
+                <div class="item">
+                    <img class="itemImg"  data-type="itemPage5" src="img/GreenTshirt.png" alt="">
+                    <p class="itemTitle">Зелёное искусство</p>
+                    <p class="itemPrice">1 800 </p>
+                    <p class="buyButton" onclick="addToCard(4)">В корзину</p>
+                        <div class="itemCounter hidden">
+                            <p class="itemMinus">-</p>
+                            <p class="itemQuantity">1</p>
+                            <p class="itemPlus">+</p>
+                        </div>
+                </div>
+
+
+                <div class="item" >
+                    <img class="itemImg " data-type="itemPage6" src="img/notepad.png" alt="">
+                    <p class="itemTitle">Блокнот</p>
+                    <p class="itemPrice">900 </p>
+                    <p class="buyButton" onclick="addToCard(5)">В корзину</p>
+                        <div class="itemCounter hidden">
+                            <p class="itemMinus">-</p>
+                            <p class="itemQuantity">1</p>
+                            <p class="itemPlus">+</p>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="CartPage" style="display: none;">
+            <div class="cartItems">
+                <div class="cartItem">
+                    <p class="itemTitle">Блокнот</p>
+                    <div>
+                        <div class="itemColor"></div>
+                        <div class="itemSize">s</div>
+                    </div>
+    
+                    <div class="itemCounter hidden">
+                        <p class="itemMinus">-</p>
+                        <p class="itemQuantity">1</p>
+                        <p class="itemPlus">+</p>
+                    </div>
+    
+                    <p class="itemPrice">900 </p>
+                </div>
+               
+            </div>
+            
+            <div class="cartValue">
+                <p>Итого:</p>
+                <p class="cartSum">0 </p>
+            </div>
+
+            <p class="buyButton payButton">Оплата</p>
+        </div>
+
+
+        <div class="itemPages" style="display: none;">
+
+            
+
+            <div class="itemPage" id="itemPage1">
+                <img class="itemImg" data-type="itemPage1" src="img/HoodieBlack.png" alt="">
+                
+                <div class="item">
+                    
+                    <div class="itemInfo">
+                        <p class="itemTitle">Толстовка “Кусок неба”</p>
+                        <p class="itemSubtitle">Там, где одни видят дно - другие видят возможности</p>
+                        
+                        <div class="itemColors hidden">
+                            <div class="color black"></div>
+                            <div class="color yellow"></div>
+                            <div class="color blue"></div>
+                            <div class="color gray"></div>
+                            <div class="color green"></div>
+                        </div>
+                        <div class="itemSizes hidden">
+                            <div class="Size">XS</div>
+                            <div class="Size">S</div>
+                            <div class="Size">M</div>
+                            <div class="Size">L</div>
+                            <div class="Size">XL</div>
+                        </div>
+
+
+                        <p class="buyButton" onclick="addToCard(0)">В корзину</p>
+                            <div class="itemCounter hidden">
+                                <p class="itemMinus">-</p>
+                                <p class="itemQuantity">1</p>
+                                <p class="itemPlus">+</p>
+                            </div>
+                    </div>
+                    
+                </div>
+
+                <img src="img/CloseButton.png" alt="" class="closeBTN">
+                
+            </div>
+
+            <div class="itemPage" id="itemPage2">
+                <img class="itemImg" data-type="itemPage2" src="img/HoodieYellow.png" alt="">
+                <div class="item">
+                   
+                    <div class="itemInfo">
+                        <p class="itemTitle">Толстовка “Труба”</p>
+                        <p class="itemSubtitle">То, что на толстовке труба, не значит, что мне труба</p>
+                        
+                        <div class="itemColors hidden">
+                            <div class="color black"></div>
+                            <div class="color yellow"></div>
+                            <div class="color blue"></div>
+                            <div class="color gray"></div>
+                            <div class="color green"></div>
+                        </div>
+                        <div class="itemSizes hidden">
+                            <div class="Size">XS</div>
+                            <div class="Size">S</div>
+                            <div class="Size">M</div>
+                            <div class="Size">L</div>
+                            <div class="Size">XL</div>
+                        </div>
+
+
+                        <p class="buyButton" onclick="addToCard(1)">В корзину</p>
+                            <div class="itemCounter hidden">
+                                <p class="itemMinus">-</p>
+                                <p class="itemQuantity">1</p>
+                                <p class="itemPlus">+</p>
+                            </div>
+                    </div>
+                    
+                </div>
+                <img src="img/CloseButton.png" alt="" class="closeBTN">
+            </div>
+            
+            <div class="itemPage" id="itemPage3">
+                <img class="itemImg" data-type="itemPage3" src="img/CardOtherSide.png" alt="">
+                <div class="item">
+                    
+                    <div class="itemInfo">
+                        <p class="itemTitle">Открытки “Другая сторона”</p>
+                        <p class="itemSubtitle">Другая сторона всем известных достопримечательностей</p>
+     
+                        <p class="buyButton" onclick="addToCard(2)">В корзину</p>
+                            <div class="itemCounter hidden">
+                                <p class="itemMinus">-</p>
+                                <p class="itemQuantity">1</p>
+                                <p class="itemPlus">+</p>
+                            </div>
+                    </div>
+                    
+                </div>
+
+                <img src="img/CloseButton.png" alt="" class="closeBTN">
+                
+            </div>
+
+            <div class="itemPage" id="itemPage4">
+                <img class="itemImg" data-type="itemPage4" src="img/CardHighCulture.png" alt="">
+                <div class="item">
+                   
+                    <div class="itemInfo">
+                        <p class="itemTitle">Открыка “Высокое искусство”</p>
+                        <p class="itemSubtitle">Кусочек прекрасного, который всегда будет рядом с вами</p>
+                        
+                    
+
+
+                        <p class="buyButton" onclick="addToCard(3)">В корзину</p>
+                            <div class="itemCounter hidden">
+                                <p class="itemMinus">-</p>
+                                <p class="itemQuantity">1</p>
+                                <p class="itemPlus">+</p>
+                            </div>
+                    </div>
+                    
+                </div>
+
+                <img src="img/CloseButton.png" alt="" class="closeBTN">
+                
+            </div>
+            <div class="itemPage" id="itemPage5">
+                <img class="itemImg"  data-type="itemPage5" src="img/GreenTshirt.png" alt="">
+                <div class="item">
+                   
+                    <div class="itemInfo">
+                        <p class="itemTitle">Футболка “Зеленое искусство”</p>
+                        <p class="itemSubtitle">Кусочек прекрасного, который всегда будет рядом с вами, у самого сердца</p>
+                        
+                        <div class="itemColors hidden">
+                            <div class="color black"></div>
+                            <div class="color yellow"></div>
+                            <div class="color blue"></div>
+                            <div class="color gray"></div>
+                            <div class="color green"></div>
+                        </div>
+                        <div class="itemSizes hidden">
+                            <div class="Size">XS</div>
+                            <div class="Size">S</div>
+                            <div class="Size">M</div>
+                            <div class="Size">L</div>
+                            <div class="Size">XL</div>
+                        </div>
+
+
+
+                        <p class="buyButton" onclick="addToCard(4)">В корзину</p>
+                            <div class="itemCounter hidden">
+                                <p class="itemMinus">-</p>
+                                <p class="itemQuantity">1</p>
+                                <p class="itemPlus">+</p>
+                            </div>
+                    </div>
+                    
+                </div>
+
+                <img src="img/CloseButton.png" alt="" class="closeBTN">
+                
+            </div>
+            
+            <div class="itemPage" id="itemPage6">
+                <img class="itemImg" data-type="itemPage6" src="img/notepad.png" alt="">
+                <div class="item">
+                 
+                    <div class="itemInfo">
+                        <p class="itemTitle">Блокнот</p>
+                        <p class="itemSubtitle">Мрачный - не значит не красивый</p>
+                        
+                        <div class="itemColors hidden">
+                            <div class="color black"></div>
+                            <div class="color yellow"></div>
+                            <div class="color blue"></div>
+                            <div class="color gray"></div>
+                            <div class="color green"></div>
+                        </div>
+
+                        <p class="buyButton" onclick="addToCard(5)">В корзину</p>
+                            <div class="itemCounter hidden">
+                                <p class="itemMinus">-</p>
+                                <p class="itemQuantity">1</p>
+                                <p class="itemPlus">+</p>
+                            </div>
+                    </div>
+                    
+                </div>
+                <img src="img/CloseButton.png" alt="" class="closeBTN">
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footerText">Голод Александра</p>
+        <p class="footerText">Телефон: +7 (921) 325-05-86</p>
+        <p class="footerText">Телеграм: @alexdevilfish</p>
+
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
