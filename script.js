@@ -21,12 +21,14 @@ function showNotification(message) {
 var allPages = document.querySelector('.itemPages');
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Блок первого кода
   document.querySelectorAll('.itemImg').forEach(function (item) {
     item.addEventListener('click', function () {
       var itemType = item.getAttribute('data-type');
       var itemPages = document.querySelectorAll('.itemPage');
       var itemsPage = document.querySelector('.itemsPage');
       var CartPage = document.querySelector('.CartPage');
+      var allPages = document.querySelector('.itemPages'); // Добавлено для полноты
 
       itemPages.forEach(function (itemPage) {
         itemPage.style.display = 'none';
@@ -41,7 +43,38 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Блок второго кода
+  const filterButtons = document.querySelectorAll('.filterBTN');
+  const items = document.querySelectorAll('.item');
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      filterButtons.forEach(function (btn) {
+        btn.classList.remove('activeFilter');
+      });
+
+      button.classList.add('activeFilter');
+
+      const filterValue = button.getAttribute('data-filter');
+
+      filterButtons.forEach(function (btn) {
+        if (btn.getAttribute('data-filter') === 'all') {
+          btn.innerText = (filterValue === 'all') ? 'Фильтры:' : 'Сбросить фильтр';
+        }
+      });
+
+      items.forEach(function (item) {
+        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
 });
+
 
 document.querySelectorAll('.closeBTN').forEach(function (closeBtn) {
   closeBtn.addEventListener('click', function () {
@@ -69,12 +102,14 @@ cart.addEventListener("click", function(){
   CartPage.style.display = 'flex';
   itemsPage.style.display = 'none';
   allPages.style.display = 'none';
+  updateButtonClasses();
 });
 
 Merch.addEventListener("click", function(){
   CartPage.style.display = 'none';
   itemsPage.style.display = 'flex';
   allPages.style.display = 'none';
+  updateButtonClasses();
 });
 
 let total = document.querySelector('.cartSum');
@@ -153,3 +188,16 @@ let payButton = document.querySelector(".payButton");
 payButton.addEventListener("click", function(){
   showNotification("Оплата временно недоступна");
 });
+
+function updateButtonClasses() {
+
+  var CartPage = document.querySelector('.CartPage');
+  var itemsPage = document.querySelector('.itemsPage');
+
+  cart.classList.toggle('activeBTN', CartPage.style.display === 'flex');
+  cart.classList.toggle('deactiveBTN', CartPage.style.display !== 'flex');
+
+  Merch.classList.toggle('activeBTN', itemsPage.style.display === 'flex');
+  Merch.classList.toggle('deactiveBTN', itemsPage.style.display !== 'flex');
+}
+

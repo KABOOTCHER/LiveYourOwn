@@ -25,10 +25,14 @@
         <div class="itemsPage">
 
             <div class="filterBlock">
-                <p class="filterBTN">Фильтр:</p>
-                <div class="filterBTN Tag">
-                    <p class="filterName">Город</p>
-                    <img src="img/smalX.png" alt="" class="filterClose">
+                <p class="filterBTN" data-filter="all">Фильтр</p>
+                <div class="filterBTN Tag" data-filter="merch">
+                    <p class="filterName">Мерч</p>
+                    <img src="img/smalX.png" alt="" class="filterClose hidden">
+                </div>
+                <div class="filterBTN Tag"  data-filter="cloth">
+                    <p class="filterName">Одежда</p>
+                    <img src="img/smalX.png" alt="" class="filterClose hidden">
                 </div>
                 
             </div>
@@ -37,7 +41,7 @@
 
                 
 
-                <div class="item" >
+                <div class="item cloth" >
                     <img class="itemImg " data-type="itemPage1" src="img/HoodieBlack.png" alt="">
                     <p class="itemTitle">Кусок неба</p>
                     <p class="itemPrice">1 800 </p>
@@ -49,7 +53,7 @@
                         </div>
                 </div>
 
-                <div class="item" >
+                <div class="item cloth" >
                     <img class="itemImg " data-type="itemPage2" src="img/HoodieYellow.png" alt="">
                     <p class="itemTitle">Труба. Толстовка</p>
                     <p class="itemPrice">3 200 </p>
@@ -61,7 +65,7 @@
                         </div>
                 </div>
 
-                <div class="item" >
+                <div class="item merch" >
                     <img class="itemImg " data-type="itemPage3" src="img/CardOtherSide.png" alt="">
                     <p class="itemTitle">Другая сторона</p>
                     <p class="itemPrice">500 </p>
@@ -73,7 +77,7 @@
                         </div>
                 </div>
 
-                <div class="item" >
+                <div class="item merch" >
                     <img class="itemImg" data-type="itemPage4" src="img/CardHighCulture.png" alt="">
                     <p class="itemTitle">Высокое искусство</p>
                     <p class="itemPrice">300 </p>
@@ -85,7 +89,7 @@
                         </div>
                 </div>
 
-                <div class="item">
+                <div class="item cloth">
                     <img class="itemImg"  data-type="itemPage5" src="img/GreenTshirt.png" alt="">
                     <p class="itemTitle">Зелёное искусство</p>
                     <p class="itemPrice">1 800 </p>
@@ -98,7 +102,7 @@
                 </div>
 
 
-                <div class="item" >
+                <div class="item merch" >
                     <img class="itemImg " data-type="itemPage6" src="img/notepad.png" alt="">
                     <p class="itemTitle">Блокнот</p>
                     <p class="itemPrice">900 </p>
@@ -151,7 +155,7 @@
             <div class="itemPage" id="itemPage1">
                 <img class="itemImg" data-type="itemPage1" src="img/HoodieBlack.png" alt="">
                 
-                <div class="item">
+                <div class="item cloth">
                     
                     <div class="itemInfo">
                         <p class="itemTitle">Толстовка “Кусок неба”</p>
@@ -189,7 +193,7 @@
 
             <div class="itemPage" id="itemPage2">
                 <img class="itemImg" data-type="itemPage2" src="img/HoodieYellow.png" alt="">
-                <div class="item">
+                <div class="item cloth">
                    
                     <div class="itemInfo">
                         <p class="itemTitle">Толстовка “Труба”</p>
@@ -225,7 +229,7 @@
             
             <div class="itemPage" id="itemPage3">
                 <img class="itemImg" data-type="itemPage3" src="img/CardOtherSide.png" alt="">
-                <div class="item">
+                <div class="item merch">
                     
                     <div class="itemInfo">
                         <p class="itemTitle">Открытки “Другая сторона”</p>
@@ -247,7 +251,7 @@
 
             <div class="itemPage" id="itemPage4">
                 <img class="itemImg" data-type="itemPage4" src="img/CardHighCulture.png" alt="">
-                <div class="item">
+                <div class="item merch">
                    
                     <div class="itemInfo">
                         <p class="itemTitle">Открыка “Высокое искусство”</p>
@@ -271,7 +275,7 @@
             </div>
             <div class="itemPage" id="itemPage5">
                 <img class="itemImg"  data-type="itemPage5" src="img/GreenTshirt.png" alt="">
-                <div class="item">
+                <div class="item cloth">
                    
                     <div class="itemInfo">
                         <p class="itemTitle">Футболка “Зеленое искусство”</p>
@@ -310,7 +314,7 @@
             
             <div class="itemPage" id="itemPage6">
                 <img class="itemImg" data-type="itemPage6" src="img/notepad.png" alt="">
-                <div class="item">
+                <div class="item merch">
                  
                     <div class="itemInfo">
                         <p class="itemTitle">Блокнот</p>

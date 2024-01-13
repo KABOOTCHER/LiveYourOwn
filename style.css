@@ -36,6 +36,7 @@ a,p,h1{
     align-items: center;
 }
 
+
 .NavText{
     box-sizing: border-box;
     font-weight: 700;
@@ -50,8 +51,14 @@ a,p,h1{
     
 }
 
+
 .deactiveBTN{
     background-color:#21202C ;
+    color: white;
+}
+
+.NavText:hover{
+    background-color: #555572;
     color: white;
 }
 
@@ -84,6 +91,15 @@ a,p,h1{
     gap: .75rem;
     border: none;
     background-color: #ffb2cd;
+}
+.activeFilter{
+    background-color: black;
+    color: white;
+}
+
+
+.activeFilter .filterClose{
+    filter: invert();
 }
 
 .itemsBlock{
