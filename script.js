@@ -21,7 +21,7 @@ function showNotification(message) {
 var allPages = document.querySelector('.itemPages');
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Блок первого кода
+
   document.querySelectorAll('.itemImg').forEach(function (item) {
     item.addEventListener('click', function () {
       var itemType = item.getAttribute('data-type');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Блок второго кода
+//КОД С ФИЛЬТРОМ
   const filterButtons = document.querySelectorAll('.filterBTN');
   const items = document.querySelectorAll('.item');
 

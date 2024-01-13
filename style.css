@@ -158,6 +158,14 @@ a,p,h1{
     white-space:nowrap;
 }
 
+.buyButton:hover{
+    background-color:#CCADAD;
+}
+
+.buyButton:active{
+    background-color:#D9D9D9 ;
+}
+
 .itemCounter{
     display: flex;
     gap: 1rem;
